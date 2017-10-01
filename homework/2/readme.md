@@ -211,7 +211,7 @@ ans =
 
    1  
 ```  
-Not sure rn.  
+1 divided by 2 is 0.5, so matlab rounds this up to 1.  
 
 ```  
 >> int8(1/3)  
@@ -222,7 +222,7 @@ ans =
 
    0  
 ```  
-Not sure rn.  
+1 divided by 3 is 0.333333 so matlab rounds this down to 0.  
 
 ```  
 >> -5^2  
@@ -350,6 +350,150 @@ ans =
      4     3  
 ```  
 The + operator means binary addition, so matlab adds 3 to each element in row 1 of a, and 2 to each element in row 2 of a.  
+
+6. a + d  
+```  
+>> a + d  
+
+ans =  
+
+     6     5  
+     7     6  
+```  
+The + operator means binary addition, so matlab adds 5 to each element of a.  
+
+7. a .* d  
+```  
+>> a .* d  
+
+ans =  
+
+     5     0  
+    10     5  
+```  
+ The .* operator means a times d, so matlab is multiplying each element in a by 5.  
+ 
+ 8. a * d  
+ ```  
+ >> a * d  
+
+ans =  
+
+     5     0  
+    10     5  
+```  
+The * operator means matrix multiplication, but in this case it does the same thing as the .* operator since 5 is just a number being multiplied by a.  
+
+5.  Provide three different methods of generating the matrix a, one method should use the diag() function, one should use the eye function, and one should use the zeros function.  
+
+1. diag() function:  
+```  
+>> a = diag([2 2 2])  
+
+a =  
+
+     2     0     0  
+     0     2     0  
+     0     0     2  
+```  
+2. eye function:  
+```  
+>> a = 2 * eye(3)  
+
+a =  
+
+     2     0     0  
+     0     2     0  
+     0     0     2  
+```  
+3. zeros function:  
+```  
+b =  
+
+     2     0     0  
+     0     2     0  
+     0     0     2  
+
+>> a = zeros(3) + b  
+
+a =  
+
+     2     0     0  
+     0     2     0  
+     0     0     2  
+```  
+
+6.  Download this code. This code is full syntax errors. Fix the errors and submit the corrected code with name script_full_of_errors_fixed.m in your folder for this HW. Explain in front of each corrected MATLAB statement, why the error occurred. Modify the last two variables so that they display,  
+```  
+>> Persian  
+Persian =  
+Persian is a human language  
+>> Spanish  
+Spanish =   
+    'Spanish '    'is '    ' another'    'language'  
+```  
+
+Modify the last line such that for the last line the code displays,  
+```  
+Persian is not the same as Spanish  
+```  
+Ans: See script_full_of_errorsfixed.m in homework/2.  
+Output for both:  
+```  
+>> script_full_of_errorsfixed  
+    3.1416  
+
+  -2.6536e-06  
+
+The year is 2017  
+Persian is a human language  
+    'Spanish '    'is '    ' another'    'language'  
+
+Persian is not the same as Spanish  
+```  
+Explain these results.  
+
+Before, there were not quotes around Persian and Spanish, so matlab was displaying what was inside of Persian and Spanish instead of the physical two words. Once quotes were put around them in the diplay statement, it displayed 'Persian is not the same as Spanish' correctly.  
+
+
+7.  Use MATLAB help to find out how you can create a new directory named mynewdir from MATLAB command line. Then change the working directory the newly created directory. Then create a MATLAB script in this directory named myscript.m with the following code in it,  
+```  
+% First create an array from -2*pi to 2:pi  
+x = -2*pi:pi/20:2*pi;  
+
+% Calculate |sin(x)|  
+y = abs(sin(x));  
+
+plot(x,y);  
+```  
+Ans:  
+```  
+>> mkdir mynewdir  
+>> cd mynewdir  
+```  
+Now on MATLAB command line, run the script by calling its name. What do you get? Save the output as a figure and submit it with your homework.  
+
+Ans: See figure1.fig in homework/2.  It is a plot of x vs. y.  
+
+
+8.  Now change your working directory to the original directory before you created mynewdir directory. Try to run the script myscript you had created again, from MATLAB command line. What do you get? and why?  
+```  
+cd ..  
+```  
+
+The file C:\...ICP2017F\homework\2\mynewdir\myscript.m is not found in the current folder or the current matlab path. This occurs because myscript.m is stored in the mynewdir folder. It is necessary to create a path for it if we want this code to run in our old directory.  
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
