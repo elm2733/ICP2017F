@@ -5,9 +5,7 @@
 ``  
 >> a = 1  
 
-a =  
-
-     1  
+a =  1  
 ``  
 This assigns the variable a to 1.
 
