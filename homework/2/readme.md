@@ -453,7 +453,7 @@ Persian is not the same as Spanish
 ```  
 Explain these results.  
 
-Before, there were not quotes around Persian and Spanish, so matlab was displaying what was inside of Persian and Spanish instead of the physical two words. Once quotes were put around them in the diplay statement, it displayed 'Persian is not the same as Spanish' correctly.  
+Before, there were not quotes around Persian and Spanish, so matlab was displaying what was inside of Persian and Spanish instead of the physical two words. Once quotes were put around them in the diplay statement, it displayed 'Persian is not the same as 'Spanish' correctly.  
 
 
 7.  Use MATLAB help to find out how you can create a new directory named mynewdir from MATLAB command line. Then change the working directory the newly created directory. Then create a MATLAB script in this directory named myscript.m with the following code in it,  
