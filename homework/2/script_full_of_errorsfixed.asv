@@ -8,7 +8,7 @@ pi = 3.14159; % removed ' ' because the tan function takes a number
 disp(tan(pi));
 c = 4^3^2^3;
 t = ((c-78564)/c + 32); % removed an extra parenthesis and made the expression equal to t
-year = num2str(2017); % converted number 2017 to a string
+year = num2str(2017); % converted number 2
 disp(['The year is ' year]); % does it display 2017 correctly? %after you add quotes around year, yes
 stuff = {'a' 'b' 4 21 'c'};
 beginning = stuff(1); % started stuff at 1 since it can't start from 0
