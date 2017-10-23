@@ -1,4 +1,0 @@
-function f = roots(a,b,c)
-    x = zeros(2,1)
-    
-
