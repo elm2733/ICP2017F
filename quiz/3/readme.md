@@ -70,7 +70,7 @@ Output:
 0  
 ```  
 
-(4) || is about code efficiency, and | has to do if we are operating on a vector or scalar. || improves code efficiency since it is an operator that can be read as the word 'or'.
+(4) || is about code efficiency, and | has to do if we are operating on a vector. || improves code efficiency since it is an operator that can be read as the word 'or' and checks both.
 
 (5) What could be done is an if statement before x is defined, seeing if a/b is equal to Inf, and if so you could have your function automatically return 0.  
 
