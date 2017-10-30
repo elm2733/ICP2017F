@@ -20,6 +20,7 @@ ans =
     0.1760  
 ```  
 
+
 2. Egg problem output:  
 
 For To = 4:  
@@ -39,6 +40,7 @@ ans =
 
   315.2179  
 ```  
+
 
 3. Polar to Cartesian output:  
 ```  
@@ -73,6 +75,7 @@ ans =
     phi: 33.6901  
 ```  
 
+
 4. Size of a directory (bytes)  
 ```  
 >> sizeofdir(s)  
@@ -83,6 +86,7 @@ ans =
 
         2665  
 ```  
+
 
 5. Fibonacci Sequence  
 Output for f(6):  
@@ -97,6 +101,7 @@ Error output:
 Please enter a non-negative integer or type stop! -2  
 The input argument is not a non-negative integer!  
 ```  
+
 
 6. Triangle Area using a struct  
 Output:  
@@ -115,6 +120,7 @@ ans =
 
      3  
 ```  
+
 
 7. Prime number program  
 Output for 71:    
@@ -138,6 +144,46 @@ ans =
    0  
 ```  
 
+
+8. Quadratic getFunc() and evalFunc()  
+
+Test:  
+```  
+>> h1 = @genFunc  
+
+h1 =  
+
+  function_handle with value:  
+
+    @genFunc  
+
+>> h1(1,2,0)  
+Enter an x-value to plug in: 2  
+     8  
+
+
+ans =  
+
+     8  
+
+>> h2 = @genFunc  
+
+h2 =  
+
+  function_handle with value:  
+
+    @genFunc  
+
+>> h2(1,2)  
+Enter an x-value to plug in: 2  
+     8  
+
+
+ans =  
+
+     8  
+```  
+The outputs are indeed the same.  
 
 
 
