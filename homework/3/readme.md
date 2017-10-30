@@ -145,7 +145,7 @@ ans =
 ```  
 
 
-8. Quadratic getFunc() and evalFunc()  
+8. Quadratic genFunc() and evalFunc()  
 
 Test:  
 ```  
