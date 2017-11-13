@@ -1,3 +1,4 @@
+%8. (B) This will display both functions from part A
 n = 1:35;
 
 for i=length(n):-1:1
