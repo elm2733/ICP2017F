@@ -1,18 +1,24 @@
-%1. rand perm
+%1. student triples
 
 rng(131313);
 nstudents = 99;
-StudentData = readtable('students.csv');
-
 Triple = randperm(nstudents);
+fileID = fopen('students.csv');
+StudentData = readtable('students.csv');
+StudentTriple = cell(33,3);
 
-StudentTriple = cell(3,nstudents/3);
-
-for i = 1:nstudents/3
-	StudentTriple(:,1) = [ StudentData.Student(Triple(i)) ...
-						 , StudentData.Student(Triple(nstudents/3+i)) ...
-						 , StudentData.Student(Triple(2*nstudents/3+i)) ...
-                         ]; %I apologize for the underscores. I couldn't 
+row = 1;
+col = 1;
+for i = 1:99
+    StudentTriple{row,col} =  cell2mat(StudentData{Triple(i),2});
+      if(row == 33)
+        row = 1;
+        col = col + 1;
+      else
+        row = row + 1;
+      end
 end
+
+fclose(fileID);
 
 xlswrite('nameTriples.xlsx',StudentTriple);
