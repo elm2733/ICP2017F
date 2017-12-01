@@ -1,0 +1,1 @@
+(3). The difference is that gcf returns the current figure handle, while gca returns the current axes or chart for the figure.
