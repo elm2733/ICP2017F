@@ -30,5 +30,5 @@ xlabel('Fluence [ergs/cm^2]');
 ylabel('E_{peak}');
 title('Plot of E_{peak} vs Fluence for ',num2str(eventCounter),'Swift GRB events');
 set( gca, 'xscale', 'log', 'yscale', 'log');
-xlim
+
 saveas(gcf,'swiftDataPlot.png');

@@ -1,19 +1,23 @@
-function approximatePi = montyPithon(n)
-count = 0;
+function montyPithon(n)     
+points = rand(n,2);
+circle = zeros(n,2);
+pos = 1;
+for i = 1:n
+        dist = sqrt(points(i,1)^2+points(i,2)^2);
+       if(dist<=1)
+           circle(pos,1) = points(i,1);
+           circle(pos,2) = points(i,2);
+           pos = pos + 1;
+       end
+end
 
-    for i = 1:n
-        xcoordinate = rand(1); %generating number between zero and one
-        ycoordinate = rand(1);
+circle = circle(1:pos,1:2);
+disp(['pi is ' num2str(4*length(circle)/(n)) ' for ' num2str(n) ' points']);
 
-        if ((xcoordinate^2 + ycoordinate^2) <= 1)
-            count = count + 1;
-        end
-    end
-    
-    approximatePi = 4 * (count/n);
-    
-    disp(num2str(approximatePi));
-    plot(n,approximatePi);
-    figure();
+c = [244,223,65];  %shade of preffered yellow
+c = c/255;
+scatter(circle(:,1),circle(:,2), 3, c, 'filled');
+title(['pi is ' num2str(4*length(circle)/(n)) ' for ' num2str(n) ' points']);
+
 end
 
