@@ -23,15 +23,12 @@ data = [0,0];
     
     scatter(exp(data(:,2)), data(:,1), 1,'red','filled','MarkerFaceAlpha',.1,'MarkerEdgeAlpha',.1);
    
-    disp(['Captured ' num2str(eventCounter) ' data files']);
+    disp(['Captured ' num
     
-    title(['Plot of E{peak} vs Fluence for ' num2str(eventCounter) ' Swift GRB events']);
-    
+    title('Plot of E{peak} vs Fluence for 650 Swift GRB events');
     set(gca,'xscale','log','yscale','log');
     xlabel('Fluence [ergs/cm^2]');
     xlim([1.0000e-08 1.0000e-02]);
     ylabel('E{peak}');
     ylim([1.0000e0 1.0000e04]);
-    
-    saveas(gcf,'swiftPlot.png');
 end 
