@@ -1,5 +1,7 @@
-%(4)
-function montyPithon(n)     
+function plotMontyPithon(n)
+
+close all;
+figure(); hold on; box on;
 
 nums = rand(n,2); %creating an n x 2 matrix of random numbers between 0 and 1 using the rand function
 c = zeros(n,2); %creating an n x 2 zero matrix
@@ -16,8 +18,9 @@ for i = 1:n
 end
 
 c = c(1:loc,1:2);
-approximatePi = 4*length(c) / n;
 
-disp(['With n being equal to ' num2str(n) ' pi is appromixately ' num2str(approximatePi) ' using Monte Carlo methods.']);
+scatter(c(:,1),c(:,2));
+title('Estimate of pi vs. Number of Points Simulated');
+saveas(gcf,'piDataPlot.png');
 
 end

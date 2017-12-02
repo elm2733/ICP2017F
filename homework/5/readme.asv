@@ -17,9 +17,4 @@ Output for a small n = 100:
 With n being equal to 100 pi is appromixately 2.92 using Monte Carlo methods.  
 ```  
 
-Output for a larger n = 100000:  
-```  
->> montyPithon(100000)  
-With n being equal to 100000 pi is appromixately 3.1439 using Monte Carlo methods.  
-```  
-As we can see, the more points you have, the more accurate pi is.  
+Output for a larger n 
