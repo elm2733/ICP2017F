@@ -102,10 +102,25 @@ for irow = nrow:-1:1
                                     ] ...
                       );
                   colormap('parula');
-                  imagesc(data(:,:,sliceNumber));            
+                  imagesc(data(:,:,sliceNumber));  
+                  BData = data;
+                  BData(BData~=0) = 1;
+
+
+                  BCell = bwboundaries(BData(:,:,sliceNumber));
+                  imagesc(BData(:,:,sliceNumber));
+                  hold on;
+                  for iobject = 1:length(BCell)
+                    plot( BCell{iobject}(:,2) , BCell{iobject}(:,1) ...
+                          ,'linewidth',7 ...
+                          , 'color', 'red' ... 
+                         );
+
+                  end
+                  
     end
 end
 
 
+saveas(gcf,'boundaries.png');
 
-saveas(gcf,'subplots.png');        % save the figure
